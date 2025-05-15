@@ -53,15 +53,15 @@ $(document).ready(function()
 
   	if($('#email').val() == '')
   	{
-  		$('.error-msg').text('Please enter email address');
+  		$('.error-msg').text('Email is required');
   	} 
   	else if(!isValid)
   	{
-  		$('.error-msg').text('Please enter a valid email address');
+  		$('.error-msg').text('Enter a valid email address');
   	}
   	else if($('#amount-other').val() != '' && $('#amount-other').val() == 0)
   	{
-  		$('.error-msg').text('Please enter amount grather than 0');
+  		$('.error-msg').text('Enter amount grather than 0');
   	}
   	else
   	{
@@ -86,6 +86,12 @@ $(document).ready(function()
   		$('#tip_amount').val(tip_amount);
   		$('#proccess_amount').val(0);
   	}
+  });
+
+  $('#back').on('click', function()
+  {
+  	$('#setep-1').removeClass('hidden');
+  	$('#setep-2').addClass('hidden');
   });
 });
 
